@@ -1,5 +1,7 @@
 package br.com.womancancode.programa;
 
+//esse aqui tá lindão.
+
 public class TestaExcecao {
 	public static void main(String args[]) {
 		System.out.println("inicio do main");
@@ -9,8 +11,14 @@ public class TestaExcecao {
 	}
 
 	static void metodo1() {
+		
 		System.out.println("inicio do metodo1");
+		try {
 		metodo2();
+		} catch (NullPointerException e) {
+			System.out.println("erro:" + e);
+		}
+		
 		System.out.println("fim do metodo1");
 	}
 
@@ -19,7 +27,7 @@ public class TestaExcecao {
 		ContaCorrente cc = new ContaCorrente();
 		for (int i = 0; i <= 15; i++) {
 			cc.Deposita(i + 1000);
-			System.out.println(cc.getContaCorrente());
+			System.out.println(cc.getConta());
 			if (i == 5) {
 				cc = null;
 			}
@@ -28,3 +36,7 @@ public class TestaExcecao {
 	}
 
 }
+
+//basicamente, o método "try- Cacyh" serve pra não sermos pegos de surpresa,
+//pois nem sempre o código consegue identificar o erro precisamente. 
+//É uma medida de prevenção

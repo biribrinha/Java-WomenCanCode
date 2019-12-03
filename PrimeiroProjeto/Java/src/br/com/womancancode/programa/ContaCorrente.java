@@ -17,6 +17,11 @@ public class ContaCorrente {
 			// TODO Auto-generated method stub
 			
 		}
+
+		public char[] getConta() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		
 
 }
